@@ -29,7 +29,7 @@ lando ssh -s defaults -c "mongo --version" | grep v3.6.16
 lando ssh -s patch -c "mongo --version" | grep v3.6.23
 
 # Should add a new collection
-lando mongo test --eval "printjson(db.createCollection(\'lando\'))"
+lando mongo test --eval "printjson(db.createCollection('lando'))"
 
 # Should persist data after a rebuild
 lando rebuild -y
