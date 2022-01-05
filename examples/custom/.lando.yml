@@ -1,0 +1,7 @@
+name: lando-mongo
+services:
+  custom:
+    type: mongo:3.6
+    portforward: true
+    config:
+      database: custom.conf
