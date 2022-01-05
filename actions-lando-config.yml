@@ -1,0 +1,14 @@
+# Disable the "core" mongo plugins
+disablePlugins:
+  - lando-mongo
+
+# Make sure we are dogfooding this plugin for testing purposes
+plugins:
+  "@lando/mongo": /home/runner/work/mongo/mongo
+
+# Disable metrics reporting
+stats:
+  - report: false
+    url: https://metrics.lando.dev
+
+
