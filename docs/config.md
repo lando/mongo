@@ -1,45 +1,9 @@
 ---
-description: Add a highly configurable MongoDB service to Lando for local development with all the power of Docker and Docker Compose.
+title: Configuration
+description: Learn how to configure the Lando MongoDB service.
 ---
 
-# MongoDB
-
-[MongoDB](https://en.wikipedia.org/wiki/MongoDB)  is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.
-
-You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/config/services.html) top-level config in your [Landofile](https://docs.lando.dev/config/lando.html).
-
-## Supported versions
-
-*   [5.0](https://hub.docker.com/r/bitnami/mongodb)
-*   [4.4](https://hub.docker.com/r/bitnami/mongodb)
-*   **[4.2](https://hub.docker.com/r/bitnami/mongodb)**  **(default)**
-*   [4.0](https://hub.docker.com/r/bitnami/mongodb)
-*   [3.6](https://hub.docker.com/r/bitnami/mongodb)
-*   [custom](https://docs.lando.dev/config/services.html#advanced)
-
-## Legacy versions
-
-You can still run these versions with Lando but for all intents and purposes they should be considered deprecated (e.g. YMMV and do not expect a ton of support if you have an issue).
-
-*   [4.1](https://hub.docker.com/r/bitnami/mongodb)
-
-## Patch versions
-
-::: warning Not officially supported!
-While we allow users to specify patch versions for this service they are not *officially* supported so if you use one, YMMV.
-:::
-
-To use a patch version, you can do something as shown below:
-
-```yaml
-services:
-  myservice:
-    type: mongo:4.1.4
-```
-
-But make sure you use one of the available [patch tags](https://hub.docker.com/r/bitnami/mongodb/tags) for the underlying image we are using.
-
-## Configuration
+# Configuration
 
 Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/config/services.html) to get a good handle on how the magicks work.
 
@@ -71,7 +35,7 @@ You can also use mongodump to create a backup of your database, delete the mongo
 :::
 
 
-### Port forwarding
+## Port forwarding
 
 `portforward` will allow you to access this service externally by assigning a port directly on your host's `localhost`. Note that ` portforward` can be set to either `true` or a specific `port` but we *highly recommend* you set it to `true` unless you have pretty good knowledge of how port assignment works or you have a **very** compelling reason for needing a locked down port.
 
@@ -97,7 +61,7 @@ services:
     portforward: 27018
 ```
 
-### Using a custom MongoDB config file
+## Using a custom MongoDB config file
 
 You may need to override our [default mongo config](https://github.com/lando/lando/tree/master/plugins/lando-services/services/mongo) with your own [custom mongo config](https://docs.mongodb.com/manual/reference/configuration-options/).
 
@@ -127,5 +91,3 @@ services:
 ## Getting information
 
 You can get connection and credential information about your mongo instance by running [`lando info`](https://docs.lando.dev/cli/info.html). It may also be worth checking out our [accessing services externally guide](https://docs.lando.dev/guides/external-access.html).
-
-<RelatedGuides tag="Databases"/>
