@@ -63,7 +63,7 @@ services:
 
 ## Using a custom MongoDB config file
 
-You may need to override our [default mongo config](https://github.com/lando/lando/tree/master/plugins/lando-services/services/mongo) with your own [custom mongo config](https://docs.mongodb.com/manual/reference/configuration-options/).
+You may need to override our [default mongo config](https://github.com/lando/mongo/tree/main/services/mongo) with your own [custom mongo config](https://docs.mongodb.com/manual/reference/configuration-options/).
 
 If you do this, you must use a file that exists inside your application and express it relative to your project root as shown below:
 
