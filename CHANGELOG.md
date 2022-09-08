@@ -1,4 +1,4 @@
-## IN DEVELOPMENT
+## v0.6.0 - [September 7, 2022](https://github.com/lando/mongo/releases/tag/v0.6.0)
 
 ## v0.5.0 - [January 5, 2022](https://github.com/lando/mongo/releases/tag/v0.0.0)
 
