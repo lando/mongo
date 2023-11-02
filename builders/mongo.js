@@ -1,6 +1,5 @@
 'use strict';
 
-const { log } = require('console');
 // Modules
 const _ = require('lodash');
 const path = require('path');
@@ -59,17 +58,17 @@ module.exports = {
           `${options.data}:/bitnami`,
         ],
       };
-      
+
       // If options.version is greater than 5.0, use the official mongo image
       const mongoAbove5 = semver.valid(semver.coerce(options.version)) ?
         semver.gte(semver.coerce(options.version), '6.0.0')
         : options._app.log.error(`Invalid version ${options.version} for mongo service`);
 
       const mongo = mongoAbove5 ? mongoOfficial : mongoBitnami;
-      if (!options.healthcheck) options.healthcheck = mongoAbove5 ?
-        ['mongosh', 'tests', '--eval', 'db.runCommand("ping").ok']
-        : ['mongo', 'tests', '--eval', 'db.runCommand("ping").ok']; 
-      
+      if (!options.healthcheck) {
+        options.healthcheck = mongoAbove5 ? ['mongosh', 'tests', '--eval', 'db.runCommand("ping").ok']
+        : ['mongo', 'tests', '--eval', 'db.runCommand("ping").ok'];
+      }
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, mongo)});
     };
