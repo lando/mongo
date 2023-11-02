@@ -22,7 +22,7 @@ Verification commands
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should use 5.0.3 as the default 5 version
+# Should use 7.0.2 as the default 7 version
 lando ssh -s defaults -c "mongo --version" | grep v7.0.2
 
 # Should use the user specified patch version if given
