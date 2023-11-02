@@ -2,15 +2,18 @@
 
 // Modules
 const _ = require('lodash');
+const path = require('path');
 
 // Builder
 module.exports = {
   name: 'mongo',
   config: {
     version: '4.2',
-    supported: ['5.0', '4.4', '4.2', '4.1', '4.0', '3.6'],
+    supported: ['7.0', '6.0', '5.0', '4.4', '4.2', '4.1', '4.0', '3.6'],
     legacy: ['4.1'],
     pinPairs: {
+      '7.0': 'bitnami/mongodb:7.0.2-debian-11-r7',
+      '6.0': 'bitnami/mongodb:6.0.11-debian-11-r1',
       '5.0': 'bitnami/mongodb:5.0.3-debian-10-r8',
       '4.4': 'bitnami/mongodb:4.4.9-debian-10-r10',
       '4.2': 'bitnami/mongodb:4.2.6-debian-10-r33',
@@ -19,7 +22,7 @@ module.exports = {
       '3.6': 'bitnami/mongodb:3.6.16-debian-9-r41',
     },
     patchesSupported: true,
-    confSrc: __dirname,
+    confSrc: path.resolve(__dirname, '..', 'config'),
     healthcheck: ['mongo', 'tests', '--eval', 'db.runCommand("ping").ok'],
     port: '27017',
     remoteFiles: {
