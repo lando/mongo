@@ -2,6 +2,7 @@ name: lando-mongo-6
 services:
   defaults:
     type: mongo:6.0
+    healthcheck: mongosh tests --eval "db.runCommand('ping').ok"
   patch:
     type: mongo:6.0.5
 tooling:
