@@ -1,4 +1,4 @@
-name: lando-mongo-6
+name: lando-mongo-7
 services:
   defaults:
     type: mongo:7.0
