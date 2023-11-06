@@ -1,7 +1,7 @@
 {
   "name": "@lando/mongo",
   "description": "A Lando plugin that provides a tight integration with MongoDB.",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "author": "Mike Pirog @pirog",
   "license": "GPL-3.0",
   "repository": "lando/mongo",
@@ -17,7 +17,8 @@
     "node": ">=16.0.0"
   },
   "bundledDependencies": [
-    "lodash"
+    "lodash",
+    "semver"
   ],
   "lando": {},
   "main": "index.js",
