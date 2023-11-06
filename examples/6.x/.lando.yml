@@ -1,10 +1,12 @@
-name: lando-mongo
+name: lando-mongo-6
 services:
-  custom:
-    type: mongo:3.6
-    portforward: true
-    config:
-      database: custom.conf
+  defaults:
+    type: mongo:6.0
+  patch:
+    type: mongo:6.0.5
+tooling:
+  mongosh:
+    service: defaults
 
 # This is important because it lets lando know to test against the plugin in this repo
 # DO NOT REMOVE THIS!
