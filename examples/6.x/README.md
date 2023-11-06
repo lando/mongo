@@ -23,17 +23,17 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should use 6.0.11 as the default 6 version
-lando ssh -s defaults -c "mongo --version" | grep v6.0.11
+lando ssh -s defaults -c "mongod --version" | grep v6.0.11
 
 # Should use the user specified patch version if given
-lando ssh -s patch -c "mongo --version" | grep v6.0.5
+lando ssh -s patch -c "mongod --version" | grep v6.0.5
 
 # Should add a new collection
-lando mongo test --eval "printjson(db.createCollection('lando'))"
+lando mongosh test --eval "printjson(db.createCollection('lando'))"
 
 # Should persist data after a rebuild
 lando rebuild -y
-lando mongo test --eval "printjson(db.getCollectionNames())" | grep lando
+lando mongosh test --eval "printjson(db.getCollectionNames())" | grep lando
 ```
 
 Destroy tests

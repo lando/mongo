@@ -28,7 +28,6 @@ module.exports = {
     remoteFiles: {
       database: '/bitnami/mongodb/conf/lando.conf',
     },
-    healthcheck: false,
   },
   parent: '_service',
   builder: (parent, config) => class LandoMongoDb extends parent {
