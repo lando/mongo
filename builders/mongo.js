@@ -66,7 +66,7 @@ module.exports = {
 
       const mongo = mongoAbove5 ? mongoOfficial : mongoBitnami;
       if (!options.healthcheck) {
-        options.healthcheck = mongoAbove5 ? ['mongosh', 'tests', '--eval', 'db.runCommand("ping").ok']
+        options.healthcheck = true ? ['mongosh', 'tests', '--eval', 'db.runCommand("ping").ok']
         : ['mongo', 'tests', '--eval', 'db.runCommand("ping").ok'];
       }
       // Send it downstream
