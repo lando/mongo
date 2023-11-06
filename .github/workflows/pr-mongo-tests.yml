@@ -40,7 +40,8 @@ jobs:
         with:
           lando-version: ${{ matrix.lando-version }}
           config: |
-            plugins.@lando/mongo=/home/runner/work/mongo/mongo
+            setup.skipCommonPlugins=true
+            setup.plugins.@lando/mongo=/home/runner/work/mongo/mongo
           telemetry: false
       - name: Run Leia Tests
         uses: lando/run-leia-action@v2
