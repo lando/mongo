@@ -1,18 +1,23 @@
+## v1.0.0 - [December 7, 2023](https://github.com/lando/mongo/releases/tag/v1.0.0)
+
+* Dialed fully for `lando update`
+
 ## v0.9.0 - [Nov 6, 2023](https://github.com/lando/mongo/releases/tag/v0.9.0)
-  * Added Mongo 6.x/7.x using official Docker Hub images. [#25](https://github.com/lando/mongo/pull/25)
-  * Refactored plugin folder layout and used new Lando setup commands to test isolated plugin.
-  * Merged Dependabot updates.
+
+* Added Mongo 6.x/7.x using official Docker Hub images. [#25](https://github.com/lando/mongo/pull/25)
+* Refactored plugin folder layout and used new Lando setup commands to test isolated plugin.
+* Merged Dependabot updates.
 
 ## v0.8.0 - [July 3, 2023](https://github.com/lando/mongo/releases/tag/v0.8.0)
-  * Removed bundle-dependencies and version-bump-prompt from plugin.
-  * Updated package to use prepare-release-action.
-  * Updated documentation to reflect new release process.
+
+* Removed bundle-dependencies and version-bump-prompt from plugin.
+* Updated package to use prepare-release-action.
+* Updated documentation to reflect new release process.
 
 ## v0.7.0 - [December 12, 2022](https://github.com/lando/mongo/releases/tag/v0.7.0)
-  * Added bundle-dependencies to release process.
-  * Fixed bug in plugin dogfooding test.
 
-## v0.6.0 - [September 7, 2022](https://github.com/lando/mongo/releases/tag/v0.6.0)
+* Added bundle-dependencies to release process.
+* Fixed bug in plugin dogfooding test.
 
 ## v0.5.0 - [January 5, 2022](https://github.com/lando/mongo/releases/tag/v0.0.0)
 
