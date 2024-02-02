@@ -5,9 +5,9 @@ description: Learn how to configure the Lando MongoDB service.
 
 # Configuration
 
-Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/config/services.html) to get a good handle on how the magicks work.
+Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/core/v3/lando-service.html) to get a good handle on how the magicks work.
 
-Also note that options, in addition to the [build steps](https://docs.lando.dev/config/services.html#build-steps) and [overrides](https://docs.lando.dev/config/services.html#overrides) that are available to every service, are shown below:
+Also note that options, in addition to the [build steps](https://docs.lando.dev/core/v3/lando-service.html#build-steps) and [overrides](https://docs.lando.dev/core/v3/lando-service.html#overrides) that are available to every service, are shown below:
 
 ```yaml
 services:
@@ -63,7 +63,7 @@ services:
 
 ## Using a custom MongoDB config file
 
-You may need to override our [default mongo config](https://github.com/lando/mongo/tree/main/services/mongo) with your own [custom mongo config](https://docs.mongodb.com/manual/reference/configuration-options/).
+You may need to override our [default mongo config](https://github.com/lando/mongo/tree/main/builders) with your own [custom mongo config](https://docs.mongodb.com/manual/reference/configuration-options/).
 
 If you do this, you must use a file that exists inside your application and express it relative to your project root as shown below:
 
