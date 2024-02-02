@@ -22,7 +22,7 @@ services:
 You should be careful switching database `version` because the underlying database will not be compatible unless you follow these steps to upgrade it:
 
 If you have a current project with 4.2 that you wish to upgrade to 5.0, you need to upgrade to 4.4 first (change the version, run lando rebuild) and do the tiny step described here:
-https://docs.mongodb.com/v5.0/release-notes/4.4-upgrade-standalone/
+https://www.mongodb.com/docs/v5.0/release-notes/4.4-upgrade-standalone/
 
 > Run the setFeatureCompatibilityVersion command against the admin database:
 > db.adminCommand( { setFeatureCompatibilityVersion: "4.4" } )
@@ -63,7 +63,7 @@ services:
 
 ## Using a custom MongoDB config file
 
-You may need to override our [default mongo config](https://github.com/lando/mongo/tree/main/builders) with your own [custom mongo config](https://docs.mongodb.com/manual/reference/configuration-options/).
+You may need to override our [default mongo config](https://github.com/lando/mongo/tree/main/builders) with your own [custom mongo config](https://www.mongodb.com/docs/manual/reference/configuration-options/).
 
 If you do this, you must use a file that exists inside your application and express it relative to your project root as shown below:
 
