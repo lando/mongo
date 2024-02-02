@@ -5,7 +5,7 @@ description: Learn how to develop and contribute to the Lando Mongo service
 
 # Development
 
-This guide contains information to help onboard developers to work on the [mongo](https://mongo.microsoft.com/en-us/) integration, hereafter referred to as *the plugin*.
+This guide contains information to help onboard developers to work on the [mongo](https://www.mongodb.com/) integration, hereafter referred to as *the plugin*.
 
 ## Requirements
 
