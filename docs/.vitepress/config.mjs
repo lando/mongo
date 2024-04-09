@@ -49,8 +49,8 @@ function sidebar() {
         {text: 'GitHub', link: 'https://github.com/lando/mongo/issues/new/choose'},
         {text: 'Slack', link: 'https://www.launchpass.com/devwithlando'},
         {text: 'Contact Us', link: '/support'},
+        {text: 'Examples', link: 'https://github.com/lando/mongo/tree/main/examples'},
       ],
     },
-    {text: 'Examples', link: 'https://github.com/lando/mongo/tree/main/examples'},
   ];
 };
