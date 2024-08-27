@@ -18,6 +18,8 @@ services:
 
 ## Supported versions
 
+*   [7.0](https://hub.docker.com/_/mongo)
+*   [6.0](https://hub.docker.com/_/mongo)
 *   [5.0](https://hub.docker.com/r/bitnami/mongodb)
 *   [4.4](https://hub.docker.com/r/bitnami/mongodb)
 *   **[4.2](https://hub.docker.com/r/bitnami/mongodb)**  **(default)**
