@@ -8,7 +8,7 @@ next: ./config.html
 
 [MongoDB](https://www.mongodb.com/) is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.
 
-You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/core/v3/lando-service.html) top-level config in your [Landofile](https://docs.lando.dev/core/v3).
+You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/core/v3/services/lando.html) top-level config in your [Landofile](https://docs.lando.dev/core/v3).
 
 ```yaml
 services:
@@ -25,7 +25,7 @@ services:
 *   **[4.2](https://hub.docker.com/r/bitnami/mongodb)**  **(default)**
 *   [4.0](https://hub.docker.com/r/bitnami/mongodb)
 *   [3.6](https://hub.docker.com/r/bitnami/mongodb)
-*   [custom](https://docs.lando.dev/core/v3/lando-service.html#overrides)
+*   [custom](https://docs.lando.dev/core/v3/services/lando.html#overrides)
 
 ## Legacy versions
 
