@@ -22,7 +22,7 @@ services:
 You should be careful switching database `version` because the underlying database will not be compatible unless you follow these steps to upgrade it:
 
 If you have a current project with 4.2 that you wish to upgrade to 5.0, you need to upgrade to 4.4 first (change the version, run lando rebuild) and do the tiny step described here:
-https://www.mongodb.com/docs/v5.0/release-notes/4.4-upgrade-standalone/
+https://www.mongodb.com/docs/v5.3/release-notes/5.0-upgrade-standalone/
 
 > Run the setFeatureCompatibilityVersion command against the admin database:
 > db.adminCommand( { setFeatureCompatibilityVersion: "4.4" } )
