@@ -10,9 +10,10 @@ module.exports = {
   name: 'mongo',
   config: {
     version: '4.2',
-    supported: ['7.0', '6.0', '5.0', '4.4', '4.2', '4.1', '4.0', '3.6'],
+    supported: ['8.0', '7.0', '6.0', '5.0', '4.4', '4.2', '4.1', '4.0', '3.6'],
     legacy: ['4.1'],
     pinPairs: {
+      '8.0': 'mongo:8.0.9-noble',
       '7.0': 'mongo:7.0.2-jammy',
       '6.0': 'mongo:6.0.11-jammy',
       '5.0': 'bitnami/mongodb:5.0.3-debian-10-r8',
