@@ -10,11 +10,16 @@
 [[context.deploy-preview.plugins]]
   package = "netlify-plugin-checklinks"
   [context.deploy-preview.plugins.inputs]
-    todoPatterns = [ "load", "CHANGELOG.html", "x.com", "twitter.com", "/v/" ]
+    todoPatterns = [
+      "load",
+      "CHANGELOG.html",
+      "/v/",
+      "x.com",
+      "twitter.com",
+      "www.mongodb.com"
+    ]
     skipPatterns = [ ".rss", ".gif", ".jpg" ]
     checkExternal = true
-
-
 
 # Sets our asset optimization
 [build.processing.css]
