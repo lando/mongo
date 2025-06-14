@@ -1,0 +1,14 @@
+name: lando-mongo-7
+services:
+  defaults:
+    type: mongo:8.0
+  patch:
+    type: mongo:8.0.2
+tooling:
+  mongosh:
+    service: defaults
+
+# This is important because it lets lando know to test against the plugin in this repo
+# DO NOT REMOVE THIS!
+plugins:
+  "@lando/mongo": ./../../
