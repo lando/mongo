@@ -5,14 +5,14 @@ description: Learn how to configure the Lando MongoDB service.
 
 # Configuration
 
-Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/core/v3/services/lando.html) to get a good handle on how the magicks work.
+Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/services/lando-3.html) to get a good handle on how the magicks work.
 
-Also note that options, in addition to the [build steps](https://docs.lando.dev/core/v3/services/lando.html#build-steps) and [overrides](https://docs.lando.dev/core/v3/services/lando.html#overrides) that are available to every service, are shown below:
+Also note that options, in addition to the [build steps](https://docs.lando.dev/services/lando-3.html#build-steps) and [overrides](https://docs.lando.dev/services/lando-3.html#overrides) that are available to every service, are shown below:
 
 ```yaml
 services:
   myservice:
-    type: mongo:4.0
+    type: mongo:8.0
     portforward: false
     config:
       database: SEE BELOW
@@ -21,19 +21,10 @@ services:
 ::: warning Be careful when switching database version!
 You should be careful switching database `version` because the underlying database will not be compatible unless you follow these steps to upgrade it:
 
-If you have a current project with 4.2 that you wish to upgrade to 5.0, you need to upgrade to 4.4 first (change the version, run lando rebuild) and do the tiny step described here:
-https://www.mongodb.com/docs/v5.3/release-notes/5.0-upgrade-standalone/
-
-> Run the setFeatureCompatibilityVersion command against the admin database:
-> db.adminCommand( { setFeatureCompatibilityVersion: "4.4" } )
-
-Before you update the mongodb version to 5.0 and repeat the above step.
-
-You can also use mongodump to create a backup of your database, delete the mongo instance, recreate it on a new version and use mongorestore to populate the database again.
+Use `mongodump` to create a backup of your database, delete the mongo instance, recreate it on a new version and use `mongorestore` to populate the database again.
 
 **Ignoring this warning can prevent your database from starting**
 :::
-
 
 ## Port forwarding
 
@@ -48,7 +39,7 @@ You can also use mongodump to create a backup of your database, delete the mongo
 ```yaml
 services:
   myservice:
-    type: mongo
+    type: mongo:8.0
     portforward: true
 ```
 
@@ -57,7 +48,7 @@ services:
 ```yaml
 services:
   myservice:
-    type: mongo
+    type: mongo:8.0
     portforward: 27018
 ```
 
@@ -83,7 +74,7 @@ Note that you can put your configuration files anywhere inside your application 
 ```yaml
 services:
   myservice:
-    type: mongo
+    type: mongo:8.0
     config:
       database: config/custom.conf
 ```
@@ -91,3 +82,21 @@ services:
 ## Getting information
 
 You can get connection and credential information about your mongo instance by running [`lando info`](https://docs.lando.dev/cli/info.html). It may also be worth checking out our [accessing services externally guide](https://docs.lando.dev/guides/external-access.html).
+
+## Tooling
+
+You can add [Lando tooling](https://docs.lando.dev/landofile/tooling.html)(e.g. `lando mongodump`) to pass commands to your mongo instance by adding the following to the `tooling` section of your landofile:
+
+```yaml
+services:
+  myservice:
+    type: mongo:8.0
+
+tooling:
+  mongodump:
+    service: myservice
+  mongorestore:
+    service: myservice
+  mongosh:
+    service: myservice
+```

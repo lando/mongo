@@ -13,7 +13,7 @@ Add a `mongo` service to your Landofile
 ```yaml
 services:
   myservice:
-    type: mongo
+    type: mongo:8.0
 ```
 
 For more info you should check out the [docs](https://docs.lando.dev/mongo):
@@ -38,6 +38,7 @@ We try to log all changes big and small in both [THE CHANGELOG](https://github.c
 
 * [@pirog](https://github.com/pirog)
 * [@reynoldsalec](https://github.com/reynoldsalec)
+* [@AaronFeledy](https://github.com/AaronFeledy)
 
 ## Contributors
 
