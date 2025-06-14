@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.3.0 - [June 14, 2025](https://github.com/lando/mongo/releases/tag/v1.3.0)
+
 * Added Mongo 8.x using official Docker Hub images.
 
 ## v1.2.3 - [December 6, 2024](https://github.com/lando/mongo/releases/tag/v1.2.3)
