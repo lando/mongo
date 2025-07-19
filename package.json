@@ -3,7 +3,7 @@
   "description": "A Lando plugin that provides a tight integration with MongoDB.",
   "version": "1.3.0",
   "author": "Mike Pirog @pirog",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "repository": "lando/mongo",
   "bugs": "https://github.com/lando/mongo/issues/new/choose",
   "homepage": "https://github.com/lando/mongo",
