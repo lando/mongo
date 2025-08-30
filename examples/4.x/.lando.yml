@@ -1,7 +1,7 @@
 name: lando-mongo-4
 services:
   defaults:
-    type: mongo
+    type: mongo:4.4
   patch:
     type: mongo:4.4.11
 tooling:

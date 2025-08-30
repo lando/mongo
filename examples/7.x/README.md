@@ -22,8 +22,8 @@ Verification commands
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should use 7.0.2 as the default 7 version
-lando ssh -s defaults -c "mongod --version" | grep v7.0.2
+# Should use 7.0.23 as the default 7 version
+lando ssh -s defaults -c "mongod --version" | grep v7.0.23
 
 # Should use the user specified patch version if given
 lando ssh -s patch -c "mongod --version" | grep v7.0.1

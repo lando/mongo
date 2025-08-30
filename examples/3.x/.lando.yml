@@ -1,7 +1,7 @@
 name: lando-mongo-3
 services:
   defaults:
-    type: mongo:3.6
+    type: mongo:3.7
   patch:
     type: mongo:3.6.23
 tooling:
