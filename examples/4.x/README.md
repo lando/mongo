@@ -22,8 +22,8 @@ Verification commands
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should use 4.2.6 as the default version
-lando ssh -s defaults -c "mongo --version" | grep v4.2.6
+# Should use 4.4.15 as the default version
+lando ssh -s defaults -c "mongo --version" | grep v4.4.15
 
 # Should use the user specified patch version if given
 lando ssh -s patch -c "mongo --version" | grep v4.4.11
