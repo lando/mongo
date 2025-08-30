@@ -13,15 +13,15 @@ module.exports = {
     supported: ['8.0', '7.0', '6.0', '5.0', '4.4', '4.2', '4.1', '4.0', '3.6'],
     legacy: ['4.1'],
     pinPairs: {
-      '8.0': 'mongo:8.0.9-noble',
-      '7.0': 'mongo:7.0.2-jammy',
-      '6.0': 'mongo:6.0.11-jammy',
-      '5.0': 'bitnami/mongodb:5.0.3-debian-10-r8',
-      '4.4': 'bitnami/mongodb:4.4.9-debian-10-r10',
-      '4.2': 'bitnami/mongodb:4.2.6-debian-10-r33',
-      '4.1': 'bitnami/mongodb:4.1.13-debian-9-r96',
-      '4.0': 'bitnami/mongodb:4.0.13-debian-9-r45',
-      '3.6': 'bitnami/mongodb:3.6.16-debian-9-r41',
+      '8.0': 'mongo:8.0.13-noble',
+      '7.0': 'mongo:7.0.23-jammy',
+      '6.0': 'mongo:6.0.26-jammy',
+      '5.0': 'bitnamilegacy/mongodb:5.0.24-debian-11-r20',
+      '4.4': 'bitnamilegacy/mongodb:4.4.15',
+      '4.2': 'bitnamilegacy/mongodb:4.2.21',
+      '4.1': 'bitnamilegacy/mongodb:4.1.13-r96',
+      '4.0': 'bitnamilegacy/mongodb:4.0.27',
+      '3.6': 'bitnamilegacy/mongodb:3.7.9-r30',
     },
     patchesSupported: true,
     confSrc: path.resolve(__dirname, '..', 'config'),
@@ -47,7 +47,7 @@ module.exports = {
       };
 
       const mongoBitnami = {
-        image: `bitnami/mongodb:${options.version}`,
+        image: `bitnamilegacy/mongodb:${options.version}`,
         command: '/launch.sh',
         environment: {
           ALLOW_EMPTY_PASSWORD: 'yes',

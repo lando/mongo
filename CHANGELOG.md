@@ -1,5 +1,10 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.4.0 - [August 29, 2025](https://github.com/lando/mongo/releases/tag/v1.4.0)
+
+* Migrated to use the new Bitnamilegacy repository
+* Minor updates to use any new tags and release builds
+
 ## v1.3.0 - [June 14, 2025](https://github.com/lando/mongo/releases/tag/v1.3.0)
 
 * Added Mongo 8.x using official Docker Hub images.
