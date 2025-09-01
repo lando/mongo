@@ -8,7 +8,7 @@
 * Updated `mongo:4.4` to `4.4.15`
 * Updated `mongo:4.2` to `4.2.21`
 * Updated `mongo:4.0` to `4.0.27`
-* Updated `mongo:3.6` to `3.7.9`
+* Updated `mongo:3` to `3.7.9`
 
 ## v1.3.0 - [June 14, 2025](https://github.com/lando/mongo/releases/tag/v1.3.0)
 
