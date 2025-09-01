@@ -1,9 +1,14 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
-## v1.4.0 - [August 29, 2025](https://github.com/lando/mongo/releases/tag/v1.4.0)
-
-* Migrated to use the new Bitnamilegacy repository
-* Minor updates to use any new tags and release builds
+* Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namespace
+* Updated `mongo:8.0` to `8.0.13`
+* Updated `mongo:7.0` to `7.0.23`
+* Updated `mongo:6.0` to `6.0.26`
+* Updated `mongo:5.0` to `5.0.24`
+* Updated `mongo:4.4` to `4.4.15`
+* Updated `mongo:4.2` to `4.2.21`
+* Updated `mongo:4.0` to `4.0.27`
+* Updated `mongo:3.6` to `3.7.9`
 
 ## v1.3.0 - [June 14, 2025](https://github.com/lando/mongo/releases/tag/v1.3.0)
 

@@ -17,13 +17,15 @@ jobs:
           - examples/5.x
           - examples/6.x
           - examples/7.x
+          - examples/8.x
           - examples/custom
         lando-version:
-          - 3-edge-slim
+          - 3-edge
+          - 3-stable
         os:
           - ubuntu-24.04
         node-version:
-          - '18'
+          - '20'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
