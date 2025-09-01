@@ -25,7 +25,6 @@ module.exports = {
       '4.1',
       '4.0',
       '3',
-      '3.7',
       '3.6',
     ],
     pinPairs: {
@@ -42,9 +41,8 @@ module.exports = {
       '4.2': 'bitnamilegacy/mongodb:4.2.21',
       '4.1': 'bitnamilegacy/mongodb:4.1.13-r96',
       '4.0': 'bitnamilegacy/mongodb:4.0.27',
-      '3': 'bitnamilegacy/mongodb:3.7.9-r30',
-      '3.7': 'bitnamilegacy/mongodb:3.7.9-r30',
-      '3.6': 'bitnamilegacy/mongodb:3.6.16-debian-9-r41',
+      '3': 'bitnamilegacy/mongodb:3.6.23',
+      '3.6': 'bitnamilegacy/mongodb:3.6.23',
     },
     patchesSupported: true,
     confSrc: path.resolve(__dirname, '..', 'config'),
@@ -93,6 +91,7 @@ module.exports = {
         options.healthcheck = mongoAbove5 ? ['mongosh', 'tests', '--eval', 'db.runCommand("ping").ok']
         : ['mongo', 'tests', '--eval', 'db.runCommand("ping").ok'];
       }
+
       // Send it downstream
       super(id, options, {services: _.set({}, options.name, mongo)});
     };

@@ -19,11 +19,11 @@ lando start
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should use 3.7.9 as the default 3 version
-lando ssh -s defaults -c "mongo --version" | grep v3.7.9
+# Should use 3.6.23 as the default 3 version
+lando exec defaults -- mongo --version | grep v3.6.23
 
 # Should use the user specified patch version if given
-lando ssh -s patch -c "mongo --version" | grep v3.6.23
+lando exec patch -- mongo --version | grep v3.6.21
 
 # Should add a new collection
 lando mongo test --eval "printjson(db.createCollection('lando'))"
