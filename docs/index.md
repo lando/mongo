@@ -19,19 +19,19 @@ services:
 
 *   [8.0](https://hub.docker.com/_/mongo/tags?name=8.0.)
 *   [7.0](https://hub.docker.com/_/mongo/tags?name=7.0.)
-*   [6.0](https://hub.docker.com/_/mongo/tags?name=6.0.)
-*   [5.0](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=5.0.)
-*   [4.4](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=4.4.)
-*   [4.2](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=4.2.)
-*   [4.0](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=4.0.)
-*   [3.6](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=3.7.)
 *   [custom](https://docs.lando.dev/services/lando-3.html#overrides)
 
 ## Legacy versions
 
 You can still run these versions with Lando but for all intents and purposes they should be considered deprecated (e.g. YMMV and do not expect a ton of support if you have an issue).
 
+*   [6.0](https://hub.docker.com/_/mongo/tags?name=6.0.)
+*   [5.0](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=5.0.)
+*   [4.4](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=4.4.)
+*   [4.2](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=4.2.)
+*   [4.0](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=4.0.)
 *   [4.1](https://hub.docker.com/r/bitnamilegacy/mongodb)
+*   [3.7](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=3.7.)
 *   [3.6](https://hub.docker.com/r/bitnamilegacy/mongodb)
 
 ## Patch versions
