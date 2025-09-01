@@ -1,9 +1,9 @@
-name: lando-mongo-7
+name: lando-mongo-8
 services:
   defaults:
     type: mongo:8.0
   patch:
-    type: mongo:8.0.2
+    type: mongo:8.0.9
 tooling:
   mongosh:
     service: defaults
