@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.4.0 - [September 1, 2025](https://github.com/lando/mongo/releases/tag/v1.4.0)
+
 * Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namespace
 * Updated `mongo:8.0` to `8.0.13`
 * Updated `mongo:7.0` to `7.0.23`
