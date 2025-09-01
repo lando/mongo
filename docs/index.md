@@ -1,7 +1,6 @@
 ---
 title: MongoDB Lando Plugin
 description: Add a highly configurable MongoDB service to Lando for local development with all the power of Docker and Docker Compose.
-next: ./config.html
 ---
 
 # MongoDB
@@ -23,7 +22,7 @@ services:
 *   [6.0](https://hub.docker.com/_/mongo/tags?name=6.0.)
 *   [5.0](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=5.0.)
 *   [4.4](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=4.4.)
-*   **[4.2](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=4.2.)**  **(default)**
+*   [4.2](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=4.2.)
 *   [4.0](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=4.0.)
 *   [3.6](https://hub.docker.com/r/bitnamilegacy/mongodb/tags?name=3.7.)
 *   [custom](https://docs.lando.dev/services/lando-3.html#overrides)
