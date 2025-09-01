@@ -1,12 +1,10 @@
-Mongo Example
-=============
+# Mongo 5 Example
 
 This example exists primarily to test the following documentation:
 
-* [Mongo Service](https://docs.devwithlando.io/tutorials/mongo.html)
+* [Mongo Service](https://docs.lando.dev/plugins/mongo)
 
-Start up tests
---------------
+## Start up tests
 
 Run the following commands to get up and running with this example.
 
@@ -16,17 +14,16 @@ lando poweroff
 lando start
 ```
 
-Verification commands
----------------------
+## Verification commands
 
 Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should use 5.0.24 as the default 5 version
-lando ssh -s defaults -c "mongo --version" | grep v5.0.24
+lando exec defaults -- mongo --version | grep v5.0.24
 
 # Should use the user specified patch version if given
-lando ssh -s patch -c "mongo --version" | grep v5.0.5
+lando exec patch -- mongo --version | grep v5.0.5
 
 # Should add a new collection
 lando mongo test --eval "printjson(db.createCollection('lando'))"
@@ -36,8 +33,7 @@ lando rebuild -y
 lando mongo test --eval "printjson(db.getCollectionNames())" | grep lando
 ```
 
-Destroy tests
--------------
+## Destroy tests
 
 Run the following commands to trash this app like nothing ever happened.
 
